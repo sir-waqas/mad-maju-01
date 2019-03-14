@@ -1,5 +1,5 @@
 import React from 'react';
-import { Text, View, Image } from 'react-native';
+import { Text, View, Image, Linking } from 'react-native';
 import Card from './Card';
 import CardSection from './CardSection';
 import CustomButton from './CustomButton';
@@ -31,7 +31,10 @@ const AlbumDetail = (props) => {
             </CardSection>
 
             <CardSection>
-                <CustomButton onPress={() => console.log(props.album.title)} />
+                {/* <CustomButton onPress={() => console.log(props.album.title)} /> */}
+                <CustomButton onPress={() => Linking.openURL(props.album.url)} >
+                    BuyNow !!!
+                </CustomButton>
             </CardSection>
         </Card>
     );
