@@ -9,4 +9,8 @@ const CustomButton = () => {
     );
 };
 
+const styles = {
+
+};
+
 export default CustomButton;
