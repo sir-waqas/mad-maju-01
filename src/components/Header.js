@@ -10,7 +10,6 @@ const Header = (props) => {
         </View>
     );
 };
-
 //Defining the Styles
 const styles = {
     viewStyle: {
@@ -31,6 +30,5 @@ const styles = {
         backgroundColor: 'white'
     }
 };
-
 //Availability to other parts
 export default Header;

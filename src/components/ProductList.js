@@ -2,8 +2,6 @@ import React, { Component } from 'react';
 import { ScrollView } from 'react-native';
 // import axios from 'axios';
 import AlbumDetail from './AlbumDetail';
-
-
 class ProductList extends Component {
     state = { albums: [] };
     componentWillMount() {
@@ -23,7 +21,6 @@ class ProductList extends Component {
             album => <AlbumDetail key={album.title} album={album} />
         );
     }
-
     render() {
         console.log(this.state);
         return (
@@ -34,5 +31,4 @@ class ProductList extends Component {
         );
     }
 }
-
 export default ProductList;

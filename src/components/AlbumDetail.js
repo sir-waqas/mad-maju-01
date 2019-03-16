@@ -3,7 +3,6 @@ import { Text, View, Image, Linking } from 'react-native';
 import Card from './Card';
 import CardSection from './CardSection';
 import CustomButton from './CustomButton';
-
 const AlbumDetail = (props) => {
     // const AlbumDetail = (album) => {
     // const { title, artist, thumbnail_image, image } = album; //Destructuring the props item album
@@ -12,9 +11,7 @@ const AlbumDetail = (props) => {
         // <View>
         //     <Text style={{ backgroundColor: 'white' }}>{props.album.title}</Text>
         // </View>
-
         <Card>
-
             <CardSection>
                 <View style={styles.thumbnailContainerStyle}>
                     <Image style={styles.thumbnailStyle} source={{ uri: 'http://mabsapps.com/wp-content/uploads/2018/11/cropped-mabsapps-logo-black-3.png' }} />
@@ -25,11 +22,9 @@ const AlbumDetail = (props) => {
                     <Text>{props.album.artist}</Text>
                 </View>
             </CardSection>
-
             <CardSection>
                 <Image style={styles.imageStyle} source={{ uri: props.album.image }} />
             </CardSection>
-
             <CardSection>
                 {/* <CustomButton onPress={() => console.log(props.album.title)} /> */}
                 <CustomButton onPress={() => Linking.openURL(props.album.url)} >
@@ -39,7 +34,6 @@ const AlbumDetail = (props) => {
         </Card>
     );
 };
-
 const styles = {
     headerContentStyle: {
         color: 'black',
@@ -66,5 +60,4 @@ const styles = {
         width: null
     }
 };
-
 export default AlbumDetail; 
